@@ -1,23 +1,78 @@
 <template id="template">
-    <style>
-        <!-- Add some styles here -->
-    </style>
-    <!-- Add HTML for your component here.
-    Try adding <content></content> to project from the light DOM -->
+  <style>
+    /* Add some styles here */
+    #mainContainer{
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 430px;
+      background-image: url(https://lh3.googleusercontent.com/-eRH2Ctfyv2Q/UwjWFXJMW3I/AAAAAAAAM-8/684qqKCY1lo/w346-h192/Yuka%2B60.jpg);
+      background-size:100% 100%;        /*  Safari  */
+      -khtml-background-size:100% 100%;         /*  Konqueror  */
+      background-size: cover;
+    }
+
+    #headcontent{
+      display: block;
+    }
+
+    h1{
+      margin-left: 165px;
+      margin-bottom: -25px;
+      margin-top: 10px;
+      color: white;
+    }
+
+    h3{
+      margin-left: 150px;
+      color: white;
+    }
+    p{
+      color: white;
+      margin-left: 120px;
+    }
+
+    #innerContent{
+      font-family: 'Cedarville Cursive';
+      font-size: 50px;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: 1px solid black;
+      width:400px;
+      height:200px; 
+      border-radius: 10px;
+      margin-left: 12px;
+      margin-bottom: 5px;
+      background-color: rgba(0,0,0,.5)
+    }
+  </style>
+  <!-- Add HTML for your component here.
+Try adding <content></content> to project from the light DOM -->
+  <div id='mainContainer'>
+    <header id='headContent'>
+      <h1>Hello</h1>
+      <h3>My Name Is:</h3>
+    </header>
+    <div id='innerContent'>
+      <p>Shenung</p>
+    </div>
+  </div>
 </template>
 <script>
-    var createElement = function(tagName, templateId, basePrototype) {
-        basePrototype = basePrototype || HTMLElement.prototype;
-        var template = document.currentScript.ownerDocument.getElementById(templateId).content;
-        var customElementPrototype = Object.create(basePrototype);
-        customElementPrototype.createdCallback = function() {
-            var shadowRoot = this.createShadowRoot();
-            var clone = document.importNode(template, true);
-            shadowRoot.appendChild(clone);
-        };
-        return document.registerElement(tagName, {
-            prototype: customElementPrototype
-        });
+  var createElement = function(tagName, templateId, basePrototype) {
+    basePrototype = basePrototype || HTMLElement.prototype;
+    var template = document.currentScript.ownerDocument.getElementById(templateId).content;
+    var customElementPrototype = Object.create(basePrototype);
+    customElementPrototype.createdCallback = function() {
+      var shadowRoot = this.createShadowRoot();
+      var clone = document.importNode(template, true);
+      shadowRoot.appendChild(clone);
     };
-    // Initialize your component here with the above function!
+    return document.registerElement(tagName, {
+      prototype: customElementPrototype
+    });
+  };
+  // Initialize your component here with the above function!
+  createElement('badger-badge', 'template')
 </script>
