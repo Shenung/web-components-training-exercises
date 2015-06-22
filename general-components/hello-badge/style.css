@@ -1,0 +1,42 @@
+#mainContainer{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 430px;
+  background: url(https://lh3.googleusercontent.com/-eRH2Ctfyv2Q/UwjWFXJMW3I/AAAAAAAAM-8/684qqKCY1lo/w346-h192/Yuka%2B60.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+#headcontent{
+  display: block;
+}
+
+h1{
+  margin-left: 165px;
+  margin-bottom: -25px;
+  margin-top: 10px;
+  color: white;
+}
+
+h3{
+  margin-left: 150px;
+  color: white;
+}
+p{
+  color: white;
+  margin-left: 120px;
+}
+
+#innerContent{
+  font-size: 50px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid black;
+  width:400px;
+  height:200px; 
+  border-radius: 10px;
+  margin-left: 12px;
+  margin-bottom: 5px;
+  background-color: rgba(0,0,0,.5)
+}
